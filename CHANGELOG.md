@@ -5,6 +5,8 @@
 - Fix an accessibility regression test that incorrectly rejected the permitted
   five-second progress announcement on a slower hosted runner. The test now
   checks the actual throttle interval and still verifies keyboard cancellation.
+- Move hosted source checks to macOS 15 Intel runners after arm64 capacity
+  delays. Native UI validation remains separate.
 - Application behavior is unchanged. The alpha.1 source tag is preserved.
 
 

@@ -52,8 +52,8 @@ cargo build --locked --release
 ```
 
 [Validation and diagnostic commands](docs/validation.md) explain reproducible
-fixtures and the limits of performance measurements. The macOS CI checks the
-source build; human VoiceOver and visual acceptance remain separate checks.
+fixtures and the limits of performance measurements. The macOS 15 Intel CI checks the source build and tests; human VoiceOver
+and visual acceptance remain separate checks.
 
 ## Contributions and versioning
 

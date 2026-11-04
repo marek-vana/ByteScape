@@ -1,7 +1,8 @@
 # Alpha limitations
 
 The release is source-only, experimental, and tested on M1 / 8 GiB,
-macOS 27.0.1 with Rust 1.99.1. No older OS or Intel compatibility is promised.
+macOS 27.0.1 with Rust 1.99.1. No older OS or Intel UI compatibility is promised. Hosted macOS 15 Intel
+build/test checks are separate from native UI acceptance.
 
 - The strict 60 FPS UI interval target remains unmet. A synthetic million-file
   run measured mean 16.66775 ms and p95 17.375667 ms. These are frame-start
