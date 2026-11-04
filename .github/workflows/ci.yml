@@ -1,0 +1,24 @@
+name: macOS source checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Install Rust
+        run: rustup toolchain install 1.99.1 --profile minimal --component rustfmt --component clippy
+      - name: Format
+        run: cargo +1.99.1 fmt --check
+      - name: Test
+        run: cargo +1.99.1 test --locked
+      - name: Lint
+        run: cargo +1.99.1 clippy --locked --all-targets -- -D warnings
+      - name: Release build
+        run: cargo +1.99.1 build --locked --release

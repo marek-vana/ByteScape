@@ -1,0 +1,27 @@
+[package]
+name = "bytescape"
+version = "0.1.0-alpha.1"
+edition = "2024"
+publish = false
+description = "Native disk cartography for macOS"
+license = "MIT"
+repository = "https://github.com/marek-vana/ByteScape"
+readme = "README.md"
+rust-version = "1.99"
+
+[dependencies]
+eframe = { version = "=0.37.0", default-features = false, features = ["wgpu", "accesskit", "default_fonts", "system_fonts"] }
+
+png = "=0.18.1"
+libc = "=0.2.191"
+
+[profile.release]
+lto = false
+strip = true
+
+
+[target.'cfg(target_os = "macos")'.dependencies]
+objc2-app-kit = { version = "=0.3.2", default-features = false, features = ["std", "NSWorkspace", "NSAccessibility", "NSOpenPanel", "NSSavePanel", "NSPanel", "NSResponder", "NSWindow"] }
+
+objc2 = "=0.6.5"
+objc2-foundation = { version = "=0.3.2", default-features = false, features = ["std", "NSURL", "NSError", "NSString", "NSValue"] }
