@@ -1,6 +1,6 @@
 # ByteScape — rychlý návod
 
-Experimentální mapa disku pro macOS. První vydání `0.1.0-alpha.1` obsahuje pouze
+Experimentální mapa disku pro macOS. První vydání `0.1.0-alpha.2` obsahuje pouze
 zdroje; podepsaná a notarizovaná aplikace zatím není k dispozici.
 
 Ověřeno na M1 / 8 GiB, macOS 27.0.1 a Rustu 1.99.1. Nainstalujte Rust a Xcode

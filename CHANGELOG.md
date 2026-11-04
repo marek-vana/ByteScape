@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.2 — 2026-11-04
+
+- Fix an accessibility regression test that incorrectly rejected the permitted
+  five-second progress announcement on a slower hosted runner. The test now
+  checks the actual throttle interval and still verifies keyboard cancellation.
+- Application behavior is unchanged. The alpha.1 source tag is preserved.
+
+
 ## 0.1.0-alpha.1 — 2026-11-04
 
 First public, source-only alpha.

@@ -1,8 +1,9 @@
 # Releases and compatibility
 
 Cargo.toml is the single source of the application version. The first public
-version is `0.1.0-alpha.1`, tagged `v0.1.0-alpha.1` and marked as a GitHub
-prerelease. Releases currently contain source archives only. Cargo.lock is
+source tag is `v0.1.0-alpha.1`. The completed initial GitHub prerelease is
+`0.1.0-alpha.2`, tagged `v0.1.0-alpha.2`; alpha.2 corrects a timing assumption
+in the accessibility regression test found on the hosted macOS runner. Releases currently contain source archives only. Cargo.lock is
 committed; `publish = false` prevents accidental crates.io publication.
 
 SemVer applies to documented user commands and behavior. Until 1.0, a minor

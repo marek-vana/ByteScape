@@ -3,7 +3,7 @@
 Native disk cartography for macOS, built with Rust, egui/eframe and wgpu/Metal.
 Explore a folder through a GPU map, concentric rings, a file list and an inspector.
 
-**0.1.0-alpha.1 is an experimental, source-only release.** Build it locally;
+**0.1.0-alpha.2 is an experimental, source-only release.** Build it locally;
 there is no downloadable signed or notarized application yet.
 [Czech quick start](docs/README.cs.md) · [Known limitations](docs/limitations.md)
 

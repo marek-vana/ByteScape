@@ -1092,15 +1092,17 @@ mod scan_navigation_tests {
         }
         let before = app.data.files;
         let spoken = app.announcement.clone();
+        let announced_at = app.last_announcement;
         while app.data.files == before {
             assert!(Instant::now() < deadline);
             ax_frame(&mut app, &ctx, Vec::new());
             std::thread::sleep(Duration::from_millis(5));
         }
         assert_eq!(app.scan_status.as_ref().unwrap().state, State::Running);
-        assert_eq!(
-            app.announcement, spoken,
-            "progress batches do not each announce"
+        assert!(
+            app.announcement == spoken
+                || app.last_announcement.duration_since(announced_at) >= Duration::from_secs(5),
+            "progress updates may announce only after the five-second throttle interval"
         );
         ax_frame(
             &mut app,
