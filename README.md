@@ -12,7 +12,7 @@ there is no downloadable signed or notarized application yet.
 The verified environment is Apple Silicon (M1, 8 GiB), macOS 27.0.1 and
 Rust 1.99.1. Other macOS versions and Intel Macs have not been validated.
 Install Rust 1.99.1 or newer and the Xcode command line tools (`xcode-select --install`).
-Python 3.11+ is needed only for validation scripts.
+Python 3.11+ is needed for validation scripts and optional local app packaging.
 
 ```sh
 git clone https://github.com/marek-vana/ByteScape.git
